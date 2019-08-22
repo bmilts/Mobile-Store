@@ -1,4 +1,4 @@
-# Ecommerce (Work in progress throughout July-August)
+# Mobile Store (Work in progress throughout July-August)
 Building an E-commerce (and Admin) application for my friend to sell his pottery. App will integrate Firebase/Firestore/Kingfisher and Stripe
 
 ## Step 1: Created initial Login and Registration front end
@@ -9,9 +9,9 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="pmatch.gif" width="150" height="300"/> <img src="userError.gif" width="150" height="300"/> <img src="customError.gif" width="150" height="300"/>
 
-## Step 3: Added forgot password functionality, along with Home collection view, and product table view to show categories and products. 
+## Step 3: Added forgot password functionality, along with Home table view, and product table view to show categories and products. Updated design.  
 
-<img src="segue.gif" width="150" height="300"/>
+<img src="segue.gif" width="150" height="300"/> <img src="udesign.png" width="150" height="300"/>
 
 ## Key Learning
 
@@ -24,4 +24,6 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Forgot password through firebase
 * Custome cell Xibs for collectionView (Currently effected by error, may change) and TableView 
 * Segues to move between CollectionView and tableView
+* Intiated firestore with data for categories
+* Fetched, parse, append, create new category and display data from firestore
 
