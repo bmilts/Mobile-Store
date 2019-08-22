@@ -24,4 +24,6 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Forgot password through firebase
 * Custome cell Xibs for collectionView (Currently effected by error, may change) and TableView 
 * Segues to move between CollectionView and tableView
+* Intiated firestore with data for categories
+* Fetched and displayed data from firestore
 
