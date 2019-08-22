@@ -1,4 +1,4 @@
-# Ecommerce (Work in progress throughout July-August)
+# Mobile Store (Work in progress throughout July-August)
 Building an E-commerce (and Admin) application for my friend to sell his pottery. App will integrate Firebase/Firestore/Kingfisher and Stripe
 
 ## Step 1: Created initial Login and Registration front end
