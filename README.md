@@ -25,5 +25,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Custome cell Xibs for collectionView (Currently effected by error, may change) and TableView 
 * Segues to move between CollectionView and tableView
 * Intiated firestore with data for categories
-* Fetched and displayed data from firestore
+* Fetched, parse, append, create new category and display data from firestore
 
