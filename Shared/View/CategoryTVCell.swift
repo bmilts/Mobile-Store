@@ -29,7 +29,7 @@ class CategoryTVCell: UITableViewCell {
             
        func configureCell(category: Category) {
            categoryLabel.text = category.name
-           if let url = URL(string: category.imgURL){
+           if let url = URL(string: category.imgUrl){
 
             let placeholder = UIImage(named: "background")
         

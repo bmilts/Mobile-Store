@@ -33,13 +33,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
-        
-        // Manual cell for testing
-        let category = Category.init(name: "Ceramics", id: "fjdlksaj", imgURL: "https://images.unsplash.com/photo-1554042861-0ad2fc2a8dc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", timeStamp: Timestamp())
-        
-        categories.append(category)
-    
-        
+            
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -58,7 +52,7 @@ class HomeVC: UIViewController {
             }
         }
         
-        fetchDocument()
+        fetchCollection()
     }
     
     // Fetch from firestore
@@ -71,20 +65,30 @@ class HomeVC: UIViewController {
             
             // Category data properties
             guard let data = snap?.data() else { return }
-            let name = data["name"] as? String ?? ""
-            let id = data["id"] as? String ?? ""
-            let imgUrl = data["imgUrl"] as? String ?? ""
-            let isActive = data["isActive"] as? Bool ?? true
-            let timeStamp = data["timeStamp"] as? Timestamp ?? Timestamp()
-            
-            let newCategory = Category.init(name: name, id: id, imgURL: imgUrl, isActive: isActive, timeStamp: timeStamp)
+    
+            let newCategory = Category.init(data: data)
             
             self.categories.append(newCategory)
             self.tableView.reloadData()
-            
-            
         }
         
+    }
+    
+    // Fetch all categories in firestore database
+    func fetchCollection(){
+        let collectionRef = db.collection("categories")
+        
+        collectionRef.getDocuments { (snap, error) in
+            guard let documents = snap?.documents else { return }
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+                
+            }
+            
+            self.tableView.reloadData()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

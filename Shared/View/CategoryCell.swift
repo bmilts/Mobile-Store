@@ -23,7 +23,7 @@ class CategoryCell: UICollectionViewCell {
         
         func configureCell(category: Category) {
             categoryLabel.text = category.name
-            if let url = URL(string: category.imgURL){
+            if let url = URL(string: category.imgUrl){
                 categoryImg.kf.setImage(with: url)
             }
             
