@@ -9,9 +9,9 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="pmatch.gif" width="150" height="300"/> <img src="userError.gif" width="150" height="300"/> <img src="customError.gif" width="150" height="300"/>
 
-## Step 3: Added forgot password functionality, along with Home collection view, and product table view to show categories and products. 
+## Step 3: Added forgot password functionality, along with Home table view, and product table view to show categories and products. Updated design.  
 
-<img src="segue.gif" width="150" height="300"/>
+<img src="segue.gif" width="150" height="300"/> <img src="udesign.jpg" width="150" height="300"/>
 
 ## Key Learning
 
