@@ -5,13 +5,15 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="initial.png" width="500" height="350" />
 
-## Step 2: Password matching animation, user error messages and custom messages 
+## Step 2: Password matching animation, user error messages, custom messages and added forgot password functionality
 
 <img src="pmatch.gif" width="150" height="300"/> <img src="userError.gif" width="150" height="300"/> <img src="customError.gif" width="150" height="300"/>
 
-## Step 3: Added forgot password functionality, along with Home table view, and product table view to show categories and products. Updated design.  
+## Step 3: Started home table view, and product table view to show categories and products. Updated design.  
 
 <img src="segue.gif" width="150" height="300"/> <img src="udesign.png" width="150" height="300"/>
+
+### Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView. Added functions to update tableView on database objects added, removed and edited.
 
 ## Key Learning
 
@@ -28,4 +30,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Fetched, parse, append, create new category and display data from firestore
 * Fetch and parse collection of data from firestore 
 * Added listener to immeadiately update changes in database
+* Added functions to update tableView on database changes
 
