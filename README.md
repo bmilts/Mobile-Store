@@ -26,4 +26,6 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Segues to move between CollectionView and tableView
 * Intiated firestore with data for categories
 * Fetched, parse, append, create new category and display data from firestore
+* Fetch and parse collection of data from firestore 
+* Added listener to immeadiately update changes in database
 
