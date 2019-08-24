@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--Love Ryan-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,12 +53,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="USY-bz-mz2">
+                    <navigationItem key="navigationItem" title="Love Ryan" id="USY-bz-mz2">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="6zn-mg-vEK">
                             <connections>
                                 <action selector="loginOutClicked:" destination="BYZ-38-t0r" id="LIb-Bg-1W0"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bar_cart_new" id="vIr-p0-7xe"/>
+                            <barButtonItem image="barHeartS" id="nvH-ck-K7Z"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="UfY-bU-sNE" id="JBg-Su-mKV"/>
@@ -117,6 +121,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZrA-LJ-PuT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
+                            <color key="textColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -128,4 +138,8 @@
             <point key="canvasLocation" x="230" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="barHeartS" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="bar_cart_new" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
 </document>
