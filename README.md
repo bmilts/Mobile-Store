@@ -13,7 +13,7 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="segue.gif" width="150" height="300"/> <img src="udesign.png" width="150" height="300"/>
 
-### Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView. Added functions to update tableView on database objects added, removed and edited.
+### Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView (Both for categories and products). Added functions to update tableView on database objects added, removed and edited.
 
 ## Key Learning
 
@@ -31,4 +31,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Fetch and parse collection of data from firestore 
 * Added listener to immeadiately update changes in database
 * Added functions to update tableView on database changes
+* Added database listener and add/update/remove functionality to products
 
