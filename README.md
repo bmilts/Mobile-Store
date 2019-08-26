@@ -36,5 +36,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Added listener to immeadiately update changes in database
 * Added functions to update tableView on database changes
 * Added database listener and add/update/remove functionality to products
-* Initialized firestore cloud storage to upload category images from admin app to use in both apps
+* Initialized firestore cloud storage to turn image into data upload category image data from admin app to use in both apps
 
