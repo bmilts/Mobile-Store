@@ -15,7 +15,7 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView (Both for categories and products). Added functions to update tableView on database objects added, removed and edited.
 
-### Step 5: Started admin application, copied basic storyboard design as images are shared, add category page completed with UIImage picker and tap image picker controller.
+### Step 5: Started admin application, copied basic storyboard design as images are shared, add category page completed with UIImage picker and tap image picker controller. Uploaded category image from picker to firestore storage, then use url to display in the app. 
 
 <img src="admin.png" width="150" height="300"/> <img src="imagePickers.png" width="150" height="300"/> <img src="imagePicked.png" width="150" height="300"/>
 
@@ -36,4 +36,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Added listener to immeadiately update changes in database
 * Added functions to update tableView on database changes
 * Added database listener and add/update/remove functionality to products
+* Initialized firestore cloud storage to upload category images from admin app to use in both apps
 
