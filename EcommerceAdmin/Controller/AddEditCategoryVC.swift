@@ -15,6 +15,8 @@ class AddEditCategoryVC: UIViewController {
     @IBOutlet weak var categoryImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var categoryToEdit: Category?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,8 @@ class AddEditCategoryVC: UIViewController {
         tap.numberOfTapsRequired = 1
         categoryImage.isUserInteractionEnabled = true
         categoryImage.addGestureRecognizer(tap)
+        
+        // If editing, categoryToEdit will not equal nil
     }
     
     @objc func imageTapped(_ tap: UITapGestureRecognizer) {

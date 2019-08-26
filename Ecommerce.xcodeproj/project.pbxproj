@@ -45,12 +45,14 @@
 		547F88C222DBA0BE008A3E39 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C122DBA0BE008A3E39 /* LoginVC.swift */; };
 		547F88C422DBA0CF008A3E39 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C322DBA0CF008A3E39 /* RegisterVC.swift */; };
 		547F88C722DE598F008A3E39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C622DE598F008A3E39 /* Extensions.swift */; };
+		54A2BC2E23142B3800B17095 /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2BC2D23142B3800B17095 /* AdminProductsVC.swift */; };
 		54B75A5A22ED9A6D00F6B7BB /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B75A5822ED9A6D00F6B7BB /* ForgotPasswordVC.swift */; };
 		54B75A5B22ED9A6D00F6B7BB /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B75A5922ED9A6D00F6B7BB /* ForgotPasswordVC.xib */; };
 		54C9D75623112025001C5070 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9D75423112025001C5070 /* ProductDetailVC.swift */; };
 		54C9D75723112025001C5070 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C9D75523112025001C5070 /* ProductDetailVC.xib */; };
 		54C9FDF122E4A696006F79D5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9FDF022E4A696006F79D5 /* Constants.swift */; };
 		54C9FDF422E4D62F006F79D5 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9FDF322E4D62F006F79D5 /* RoundedViews.swift */; };
+		54EA7A04231454EF00153B76 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA7A03231454EF00153B76 /* AddEditProductsVC.swift */; };
 		54ED7B31230C531D005AD8B3 /* CategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */; };
 		54ED7B32230C531D005AD8B3 /* CategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */; };
 		54ED7B33230C531D005AD8B3 /* CategoryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54ED7B30230C531D005AD8B3 /* CategoryTVCell.xib */; };
@@ -95,12 +97,14 @@
 		547F88C122DBA0BE008A3E39 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		547F88C322DBA0CF008A3E39 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		547F88C622DE598F008A3E39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		54A2BC2D23142B3800B17095 /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
 		54B75A5822ED9A6D00F6B7BB /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		54B75A5922ED9A6D00F6B7BB /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		54C9D75423112025001C5070 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		54C9D75523112025001C5070 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
 		54C9FDF022E4A696006F79D5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		54C9FDF322E4D62F006F79D5 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		54EA7A03231454EF00153B76 /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTVCell.swift; sourceTree = "<group>"; };
 		54ED7B30230C531D005AD8B3 /* CategoryTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTVCell.xib; sourceTree = "<group>"; };
 		54FF6A4E231288A700C2B616 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 				5438C32622D79359001E530A /* AppDelegate.swift */,
 				5438C32822D79359001E530A /* AdminHomeVC.swift */,
 				54FF6A4E231288A700C2B616 /* AddEditCategoryVC.swift */,
+				54A2BC2D23142B3800B17095 /* AdminProductsVC.swift */,
+				54EA7A03231454EF00153B76 /* AddEditProductsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -589,6 +595,8 @@
 				5438C32922D79359001E530A /* AdminHomeVC.swift in Sources */,
 				545DF72723127519004A62DD /* HomeVC.swift in Sources */,
 				54427259230BD708008E9637 /* RoundedViews.swift in Sources */,
+				54EA7A04231454EF00153B76 /* AddEditProductsVC.swift in Sources */,
+				54A2BC2E23142B3800B17095 /* AdminProductsVC.swift in Sources */,
 				54427252230BCE9F008E9637 /* CategoryCell.swift in Sources */,
 				54FF6A4F231288A700C2B616 /* AddEditCategoryVC.swift in Sources */,
 				5442725A230BD70E008E9637 /* Extensions.swift in Sources */,
