@@ -15,6 +15,10 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView (Both for categories and products). Added functions to update tableView on database objects added, removed and edited.
 
+### Step 5: Started admin application, copied basic storyboard design as images are shared, add category page completed with UIImage picker and tap image picker controller.
+
+<img src="admin.png" width="150" height="300"/> <img src="imagePickers.png" width="150" height="300"/> <img src="imagePicked.png" width="150" height="300"/>
+
 ## Key Learning
 
 * Storyboard building/Auto Layout/Stackviews
