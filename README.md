@@ -19,6 +19,8 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="admin.png" width="150" height="300"/> <img src="imagePickers.png" width="150" height="300"/> <img src="imagePicked.png" width="150" height="300"/>
 
+### Step 6: Further additions to admin functionality, added admin products view controller, along with edit/add category and edit/add product view controllers. Added all correspoding UI.  
+
 ## Key Learning
 
 * Storyboard building/Auto Layout/Stackviews
@@ -37,4 +39,5 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Added functions to update tableView on database changes
 * Added database listener and add/update/remove functionality to products
 * Initialized firestore cloud storage to turn image into data upload category image data from admin app to use in both apps
+* Conditional UI segues using prepare for segue function. To destination Add category/product
 
