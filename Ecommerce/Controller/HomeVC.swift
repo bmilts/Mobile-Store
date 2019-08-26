@@ -209,9 +209,6 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCategory = categories[indexPath.row]
         performSegue(withIdentifier: Segues.ToProducts, sender: self)
-        
-        // Grey out then stop
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
