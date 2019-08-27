@@ -31,8 +31,17 @@ class ProductCell: UITableViewCell {
         productTitle.text = product.name
         // productPrice.text = product.price
         if let url = URL(string: product.imageUrl){
-                       productImg.kf.setImage(with: url)
-                   }
+            let placeHolder = UIImage(named: "Placeholder")
+            productImg.kf.indicatorType = .activity
+            let options : KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.2))]
+            productImg.kf.setImage(with: url, placeholder: placeHolder, options: options)
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = price
+        }
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {

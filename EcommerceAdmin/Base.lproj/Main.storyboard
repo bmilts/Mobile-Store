@@ -129,7 +129,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvO-pP-hhI" customClass="RoundedButton" customModule="EcommerceAdmin" customModuleProvider="target">
                                 <rect key="frame" x="20" y="802" width="374" height="40"/>
-                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ezB-0k-w2A"/>
                                 </constraints>
@@ -141,7 +141,7 @@
                                     <action selector="addCategoryClicked:" destination="9Gp-BC-S0q" eventType="touchUpInside" id="SON-cE-JYQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap image below to add category image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-fp-XeP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap below to add category image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQj-fp-XeP">
                                 <rect key="frame" x="20" y="196.5" width="374" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -174,6 +174,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="yUg-S8-P9O" id="kM1-kT-cmZ"/>
+                        <outlet property="addButton" destination="jvO-pP-hhI" id="u43-uL-3wM"/>
                         <outlet property="categoryImage" destination="xjz-Hh-vNx" id="Wyg-jd-SEg"/>
                         <outlet property="nameText" destination="OjP-2o-VJF" id="JhC-nC-vdx"/>
                     </connections>
@@ -229,9 +230,100 @@
                     <view key="view" contentMode="scaleToFill" id="aB2-eF-wLB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0fa-6E-1jr">
+                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cj4-jD-oIy">
+                                <rect key="frame" x="20" y="154" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter description below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D56-Kd-Tcm">
+                                <rect key="frame" x="116.5" y="208" width="181.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-pb-Lt2">
+                                <rect key="frame" x="20" y="242.5" width="374" height="128"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3VW-3X-DYW"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap below to add product image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld3-3p-34w">
+                                <rect key="frame" x="20" y="390.5" width="374" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjH-10-eOI" customClass="RoundedImageView" customModule="EcommerceAdmin" customModuleProvider="target">
+                                <rect key="frame" x="107" y="425" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="22k-M9-BeU"/>
+                                    <constraint firstAttribute="height" constant="200" id="Tfu-OC-TIx"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-OA-T2c">
+                                <rect key="frame" x="188.5" y="645" width="37" height="37"/>
+                                <color key="color" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1y-ZH-C5p" customClass="RoundedButton" customModule="EcommerceAdmin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yTD-l4-vaQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Add Product">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="sxL-tB-I6n" eventType="touchUpInside" id="Yfg-kV-WwJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cjH-10-eOI" firstAttribute="centerX" secondItem="aB2-eF-wLB" secondAttribute="centerX" id="4vl-Fw-FD4"/>
+                            <constraint firstItem="0fa-6E-1jr" firstAttribute="top" secondItem="AOT-Wc-iTG" secondAttribute="top" constant="20" id="5ac-Tg-QYy"/>
+                            <constraint firstItem="Cj4-jD-oIy" firstAttribute="leading" secondItem="AOT-Wc-iTG" secondAttribute="leading" constant="20" id="8lq-f0-0bc"/>
+                            <constraint firstItem="bdc-pb-Lt2" firstAttribute="top" secondItem="D56-Kd-Tcm" secondAttribute="bottom" constant="12" id="9Yi-kq-cJ1"/>
+                            <constraint firstItem="cbv-OA-T2c" firstAttribute="top" secondItem="cjH-10-eOI" secondAttribute="bottom" constant="20" id="DnF-SN-dgX"/>
+                            <constraint firstItem="D56-Kd-Tcm" firstAttribute="top" secondItem="Cj4-jD-oIy" secondAttribute="bottom" constant="20" id="H2E-kZ-Y13"/>
+                            <constraint firstItem="ld3-3p-34w" firstAttribute="top" secondItem="bdc-pb-Lt2" secondAttribute="bottom" constant="20" id="PBX-DU-FDL"/>
+                            <constraint firstItem="ld3-3p-34w" firstAttribute="leading" secondItem="AOT-Wc-iTG" secondAttribute="leading" constant="20" id="PNH-Ai-tgA"/>
+                            <constraint firstItem="cjH-10-eOI" firstAttribute="top" secondItem="ld3-3p-34w" secondAttribute="bottom" constant="12" id="RFN-Bi-oVo"/>
+                            <constraint firstItem="0fa-6E-1jr" firstAttribute="leading" secondItem="AOT-Wc-iTG" secondAttribute="leading" constant="20" id="TsZ-v0-snk"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="trailing" secondItem="ld3-3p-34w" secondAttribute="trailing" constant="20" id="Ybv-Ag-7zq"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="trailing" secondItem="bdc-pb-Lt2" secondAttribute="trailing" constant="20" id="a18-hk-56D"/>
+                            <constraint firstItem="Cj4-jD-oIy" firstAttribute="top" secondItem="0fa-6E-1jr" secondAttribute="bottom" constant="12" id="fP0-L3-QOw"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="trailing" secondItem="I1y-ZH-C5p" secondAttribute="trailing" constant="20" id="gLN-q3-uIO"/>
+                            <constraint firstItem="bdc-pb-Lt2" firstAttribute="leading" secondItem="AOT-Wc-iTG" secondAttribute="leading" constant="20" id="kNJ-er-ALb"/>
+                            <constraint firstItem="I1y-ZH-C5p" firstAttribute="leading" secondItem="AOT-Wc-iTG" secondAttribute="leading" constant="20" id="kPB-2z-o6Y"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="trailing" secondItem="0fa-6E-1jr" secondAttribute="trailing" constant="20" id="l8R-iG-P13"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="bottom" secondItem="I1y-ZH-C5p" secondAttribute="bottom" constant="20" id="qFE-LL-bbe"/>
+                            <constraint firstItem="D56-Kd-Tcm" firstAttribute="centerX" secondItem="aB2-eF-wLB" secondAttribute="centerX" id="qH8-Z0-N8z"/>
+                            <constraint firstItem="AOT-Wc-iTG" firstAttribute="trailing" secondItem="Cj4-jD-oIy" secondAttribute="trailing" constant="20" id="s1h-bd-baB"/>
+                            <constraint firstItem="cbv-OA-T2c" firstAttribute="centerX" secondItem="aB2-eF-wLB" secondAttribute="centerX" id="t9P-N7-h3Z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AOT-Wc-iTG"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cbv-OA-T2c" id="WuX-TW-Sjt"/>
+                        <outlet property="addButton" destination="I1y-ZH-C5p" id="nZ5-np-Jyc"/>
+                        <outlet property="productDescText" destination="bdc-pb-Lt2" id="aMe-FO-tNF"/>
+                        <outlet property="productImage" destination="cjH-10-eOI" id="LQn-lc-amu"/>
+                        <outlet property="productNameText" destination="0fa-6E-1jr" id="TOd-1d-zXt"/>
+                        <outlet property="productPriceText" destination="Cj4-jD-oIy" id="b9Y-U3-l3u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7j-q5-q8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

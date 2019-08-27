@@ -45,7 +45,7 @@ class AdminProductsVC: ProductsVC {
                 destination.selectedCategory = category
                 destination.productToEdit = selectedProduct
             }
-        } else if segue.identifier == Segues.ToAddEditCategory {
+        } else if segue.identifier == Segues.ToEditCategory {
             if let destination = segue.destination as? AddEditCategoryVC {
                 destination.categoryToEdit = category
             }

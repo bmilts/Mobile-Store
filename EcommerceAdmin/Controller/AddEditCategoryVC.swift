@@ -9,17 +9,22 @@
 import UIKit
 import FirebaseStorage
 import FirebaseFirestore
+import Kingfisher
 
 class AddEditCategoryVC: UIViewController {
+    
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var categoryImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addButton: UIButton!
     
     var categoryToEdit: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 1. Handle image picker (Create tap recognizer and assign to image)
+        
         // Touch gesture recognizer for image clicked
         let tap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
         tap.numberOfTapsRequired = 1
@@ -27,15 +32,24 @@ class AddEditCategoryVC: UIViewController {
         categoryImage.addGestureRecognizer(tap)
         
         // If editing, categoryToEdit will not equal nil
+        if let category = categoryToEdit {
+            nameText.text = category.name
+            addButton.setTitle("Save Changes", for: .normal)
+            
+            if let url = URL(string: category.imgUrl){
+                categoryImage.contentMode = .scaleAspectFill
+                categoryImage.kf.setImage(with: url)
+            }
+        }
     }
     
+    // 3. Need selector functions
     @objc func imageTapped(_ tap: UITapGestureRecognizer) {
         // Launch image picker
         launchImagePicker()
     }
     
     @IBAction func addCategoryClicked(_ sender: Any) {
-        activityIndicator.startAnimating()
         uploadImageThenDocument()
     }
     
@@ -47,6 +61,8 @@ class AddEditCategoryVC: UIViewController {
                 simpleAlert(title: "Error", message: "Please add category image and name")
                 return
         }
+        
+        activityIndicator.startAnimating()
         
         // Step 1: Turn the image into data and compress image
         guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
@@ -86,10 +102,18 @@ class AddEditCategoryVC: UIViewController {
     
     func uploadDocument(url: String) {
         var docRef: DocumentReference!
+        // Create initializer in product model
         var category = Category.init(name: nameText.text!, id: "", imgUrl: url, timeStamp: Timestamp())
         
-        docRef = Firestore.firestore().collection("categories").document()
-        category.id = docRef.documentID
+        if let categoryToEdit = categoryToEdit {
+            // Editing (point to existing id)
+            docRef = Firestore.firestore().collection("categories").document(categoryToEdit.id)
+            category.id = categoryToEdit.id
+        } else {
+            // New category (create new)
+            docRef = Firestore.firestore().collection("categories").document()
+            category.id = docRef.documentID
+        }
         
         let data = Category.modelToData(category: category)
         
@@ -112,6 +136,8 @@ class AddEditCategoryVC: UIViewController {
         self.activityIndicator.stopAnimating()
     }
 }
+
+// 2. Launch and pick image
 
 // Launch image picker
 extension AddEditCategoryVC : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
