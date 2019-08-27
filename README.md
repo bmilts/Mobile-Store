@@ -21,7 +21,7 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 6: Further additions to admin functionality, added admin products view controller, along with edit/add category and edit/add product view controllers. Added all correspoding UI. Added client images and test products using admin app on phone.
 
-<img src="clientImages.png" width="150" height="300"/> <img src="editProduct.png" width="150" height="300"/>
+<img src="clientImages.png" width="150" height="300"/> <img src="editProducts.png" width="150" height="300"/>
 
 ### Step 7: Add user favourite (Heart) feature/list functionality 
 
