@@ -61,7 +61,11 @@
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="bar_cart_new" id="vIr-p0-7xe"/>
-                            <barButtonItem image="barHeartS" id="nvH-ck-K7Z"/>
+                            <barButtonItem image="barHeartS" id="nvH-ck-K7Z">
+                                <connections>
+                                    <action selector="favoritesClicked:" destination="BYZ-38-t0r" id="YzA-mc-wT7"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -69,6 +73,7 @@
                         <outlet property="loginOutBtn" destination="6zn-mg-vEK" id="6YG-Z4-FuM"/>
                         <outlet property="tableView" destination="vtk-9x-WYu" id="3g3-Aa-4zH"/>
                         <segue destination="MLT-4i-LGW" kind="show" identifier="toProductsVC" id="MB5-np-seS"/>
+                        <segue destination="MLT-4i-LGW" kind="show" identifier="ToFavorites" id="euz-bk-4bD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,4 +147,7 @@
         <image name="barHeartS" width="21.333333969116211" height="21.333333969116211"/>
         <image name="bar_cart_new" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="euz-bk-4bD"/>
+    </inferredMetricsTieBreakers>
 </document>

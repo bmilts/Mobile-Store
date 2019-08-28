@@ -17,8 +17,7 @@ struct Category {
     var timeStamp: Timestamp
     
     // Default initializer
-    init(
-        name: String,
+    init(name: String,
         id: String,
         imgUrl: String,
         isActive: Bool = true,

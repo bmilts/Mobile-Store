@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54156F2923167780000C47AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA7A0523158BE900153B76 /* User.swift */; };
+		54156F2C23168428000C47AC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2B23168428000C47AC /* UserService.swift */; };
 		541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89D2305445F00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89F23054B9800CB3D87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89E23054B9800CB3D87 /* Category.swift */; };
@@ -54,6 +56,7 @@
 		54C9FDF422E4D62F006F79D5 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9FDF322E4D62F006F79D5 /* RoundedViews.swift */; };
 		54EA7A04231454EF00153B76 /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA7A03231454EF00153B76 /* AddEditProductsVC.swift */; };
 		54EA7A0623158BE900153B76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA7A0523158BE900153B76 /* User.swift */; };
+		54EA7A0B231664B700153B76 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C322DBA0CF008A3E39 /* RegisterVC.swift */; };
 		54ED7B31230C531D005AD8B3 /* CategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */; };
 		54ED7B32230C531D005AD8B3 /* CategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */; };
 		54ED7B33230C531D005AD8B3 /* CategoryTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54ED7B30230C531D005AD8B3 /* CategoryTVCell.xib */; };
@@ -67,6 +70,7 @@
 		1D7BAABDFAC13DEE6D2FACAB /* Pods-EcommerceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceUITests/Pods-EcommerceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		27DF2FD46FE14D2FF2177A24 /* Pods-EcommerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceTests/Pods-EcommerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44AB254967108886F3204441 /* Pods-EcommerceAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceAdmin/Pods-EcommerceAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		54156F2B23168428000C47AC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		541DA89E23054B9800CB3D87 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5438C2EF22D792D2001E530A /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54156F2A23168416000C47AC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				54156F2B23168428000C47AC /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5438C2E622D792D2001E530A = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +179,7 @@
 		5438C2F122D792D2001E530A /* Ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				54156F2A23168416000C47AC /* Services */,
 				54B75A5722ED9A3A00F6B7BB /* XIBs */,
 				547F88BE22DBA03A008A3E39 /* Storyboards */,
 				547F88BD22DBA032008A3E39 /* View */,
@@ -571,11 +584,13 @@
 			files = (
 				541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */,
 				541DA89F23054B9800CB3D87 /* Category.swift in Sources */,
+				54156F2C23168428000C47AC /* UserService.swift in Sources */,
 				547F88C722DE598F008A3E39 /* Extensions.swift in Sources */,
 				5438C2F522D792D2001E530A /* HomeVC.swift in Sources */,
 				54ED7B31230C531D005AD8B3 /* CategoryTVCell.swift in Sources */,
 				547F88C422DBA0CF008A3E39 /* RegisterVC.swift in Sources */,
 				5442724E230B2B5F008E9637 /* ProductCell.swift in Sources */,
+				54156F2923167780000C47AC /* User.swift in Sources */,
 				5438C2F322D792D2001E530A /* AppDelegate.swift in Sources */,
 				54C9FDF422E4D62F006F79D5 /* RoundedViews.swift in Sources */,
 				547F88C222DBA0BE008A3E39 /* LoginVC.swift in Sources */,
@@ -602,6 +617,7 @@
 				54A2BC2E23142B3800B17095 /* AdminProductsVC.swift in Sources */,
 				54427252230BCE9F008E9637 /* CategoryCell.swift in Sources */,
 				54FF6A4F231288A700C2B616 /* AddEditCategoryVC.swift in Sources */,
+				54EA7A0B231664B700153B76 /* RegisterVC.swift in Sources */,
 				5442725A230BD70E008E9637 /* Extensions.swift in Sources */,
 				54ED7B32230C531D005AD8B3 /* CategoryTVCell.swift in Sources */,
 				5438C32722D79359001E530A /* AppDelegate.swift in Sources */,

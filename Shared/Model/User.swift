@@ -38,7 +38,7 @@ struct User {
             "id": user.id,
             "email": user.email,
             "username": user.username,
-            "stripeIde": user.stripeId
+            "stripeId": user.stripeId
         ]
         
         return data

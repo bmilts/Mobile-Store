@@ -20,8 +20,7 @@ struct Product {
     var stock: Int
     
     // Default initializer 
-    init(
-        name: String,
+    init(name: String,
         id: String,
         category: String,
         price: Double,
@@ -68,4 +67,12 @@ struct Product {
           
           return data
       }
+}
+
+extension Product : Equatable {
+    
+    // Is left hand side product equal to right hand side product based on criteria
+    static func ==(lhs: Product, rhs: Product) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

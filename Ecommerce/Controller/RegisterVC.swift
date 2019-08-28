@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+import FirebaseFirestore
 
 class RegisterVC: UIViewController {
     
@@ -79,28 +81,67 @@ class RegisterVC: UIViewController {
         
         activityIndicator.startAnimating()
         
+//        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+//            if let error = error {
+//                debugPrint(error)
+//                Auth.auth().handleFireAuthError(error: error, vc: self)
+//                return
+//            }
+//
+//            // Upload new user document
+//            guard let firUser = result?.user else { return }
+//            let shopUser = User.init(id: firUser.uid, email: email, username: username, stripeId: "")
+//
+//            // Upload to firestore
+//            self.createFirestoreUser(user: shopUser)
+//
+//        }
+        
         // Get current logged in user
         guard let authUser = Auth.auth().currentUser else {
             return
         }
-        
+
         // Credentials for anonymous users
         let credential = EmailAuthProvider.credential(withEmail: email, password: password)
         authUser.link(with: credential) { (result, error) in
-            
+
             if let error = error {
                 debugPrint(error)
                 Auth.auth().handleFireAuthError(error: error, vc: self)
                 return
             }
-            
+
             // Dismiss view controller and go back to main storyboard
+
+            // Upload new user document
+            guard let firUser = result?.user else { return }
+            let shopUser = User.init(id: firUser.uid, email: email, username: username, stripeId: "")
             
-            self.activityIndicator.stopAnimating()
-            // Dismiss view controller
-            self.dismiss(animated: true, completion: nil)
+            // Upload to firestore
+            self.createFirestoreUser(user: shopUser)
         }
         
+    }
+    
+    func createFirestoreUser(user: User) {
+
+        // Create document reference
+        var newUserRef = Firestore.firestore().collection("users").document(user.id)
+
+        // Create Model data
+        let data = User.modelToData(user: user)
+
+        // Upload to firestore
+        newUserRef.setData(data) { (error) in
+            if let error = error {
+                Auth.auth().handleFireAuthError(error: error, vc: self)
+                debugPrint("Error signing in: \(error.localizedDescription)")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+            self.activityIndicator.stopAnimating()
+        }
     }
 
 }

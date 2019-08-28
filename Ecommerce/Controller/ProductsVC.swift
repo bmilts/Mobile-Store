@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-class ProductsVC: UIViewController {
+// Product VC is saying yes I will be delegate
+class ProductsVC: UIViewController, ProductCellDelegate {
     
     // Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +20,7 @@ class ProductsVC: UIViewController {
     var category: Category!
     var db: Firestore!
     var listener: ListenerRegistration!
+    var showFavorites = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +39,14 @@ class ProductsVC: UIViewController {
     
     func setProductListener() {
         
-        listener = db.products(category: category.id).addSnapshotListener({ (snap, error) in
+        var ref: Query!
+        if showFavorites {
+            ref = db.collection("users").document(UserService.user.id).collection("favorites")
+        } else {
+            ref = db.products(category: category.id)
+        }
+        
+        listener = ref.addSnapshotListener({ (snap, error) in
             
             if let error = error {
                 debugPrint(error.localizedDescription)
@@ -61,7 +70,25 @@ class ProductsVC: UIViewController {
            })
         })
     }
-
+    
+    func productFavorited(product: Product) {
+        
+        if UserService.isGuest {
+            
+            simpleAlert(title: "Error", message: "Please register/login to favorite a product.")
+            
+        } else {
+            
+            UserService.favoriteSelected(product: product)
+            
+            guard let index = products.firstIndex(of: product) else { return }
+            
+            tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+            
+        }
+        
+    }
+    
 }
 
 extension ProductsVC: UITableViewDelegate, UITableViewDataSource {
@@ -105,7 +132,7 @@ extension ProductsVC: UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.ProductCell, for: indexPath) as? ProductCell {
             
-            cell.configureCell(product: products[indexPath.row])
+            cell.configureCell(product: products[indexPath.row], delegate: self)
             return cell
         }
         

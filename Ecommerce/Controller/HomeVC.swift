@@ -100,6 +100,10 @@ class HomeVC: UIViewController {
         if let user =  Auth.auth().currentUser , !user.isAnonymous {
             // If user/ Logged in
             loginOutBtn.title = "Logout"
+            if UserService.userListener == nil {
+                // Start checking for user favorites
+                UserService.getCurrentUser()
+            }
         } else {
             loginOutBtn.title = "Login"
         }
@@ -121,7 +125,10 @@ class HomeVC: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
-
+    @IBAction func favoritesClicked(_ sender: Any) {
+        performSegue(withIdentifier: Segues.ToFavorites, sender: self)
+    }
+    
     @IBAction func loginOutClicked(_ sender: Any) {
         
         // get user
@@ -132,6 +139,7 @@ class HomeVC: UIViewController {
             // Logged in as email authentication
             do {
                 try Auth.auth().signOut()
+                UserService.logoutUser()
                 Auth.auth().signInAnonymously { (result, error) in
                     if let error = error {
                         Auth.auth().handleFireAuthError(error: error, vc: self)
@@ -217,6 +225,11 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource {
                 
                 // Send category to destination VC or ProductsVC
                 destination.category = selectedCategory
+            }
+        } else if segue.identifier == Segues.ToFavorites {
+            if let destination = segue.destination as? ProductsVC {
+                destination.category = selectedCategory
+                destination.showFavorites = true
             }
         }
     }
