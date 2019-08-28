@@ -23,7 +23,7 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="clientImages.png" width="150" height="300"/> <img src="editProducts.png" width="150" height="300"/>
 
-### Step 7: Add user favourite (Heart) feature/list functionality 
+### Step 7: Add user favourite (Heart) feature/list functionality, create user service singleton so entire app can access user functionality. Clicking on heart adds to favourite's in database assinged to firebase userID Logout functionality to remove all listeners. 
 
 ## Key Learning
 
@@ -44,4 +44,6 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Added database listener and add/update/remove functionality to products
 * Initialized firestore cloud storage to turn image into data upload category image data from admin app to use in both apps
 * Conditional UI segues using prepare for segue function. To destination Add category/product
+* Create user service singleton for entire app access to user favorited functionality
+
 
