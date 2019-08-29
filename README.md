@@ -25,7 +25,7 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 7: Add user favourite (Heart) feature/list functionality, create user service singleton so entire app can access user functionality. Clicking on heart adds to favourite's in database assinged to firebase userID Logout functionality to remove all listeners. 
 
-### Step 8: Add cloud functions to protect sensitive data in preparation for stripe
+### Step 8: Add node cloud functions to protect sensitive data in preparation for stripe. Cloud function triggered when new user added, gets email from new user and asigns a stripe customer id to stripeId infirebase database. 
 
 ## Key Learning
 
