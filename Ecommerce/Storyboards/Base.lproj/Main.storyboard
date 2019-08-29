@@ -60,7 +60,11 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem image="bar_cart_new" id="vIr-p0-7xe"/>
+                            <barButtonItem image="bar_cart_new" id="vIr-p0-7xe">
+                                <connections>
+                                    <segue destination="Dul-rP-ChG" kind="show" id="WcF-hN-cEa"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="barHeartS" id="nvH-ck-K7Z">
                                 <connections>
                                     <action selector="favoritesClicked:" destination="BYZ-38-t0r" id="YzA-mc-wT7"/>
@@ -109,7 +113,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ckY-kP-iGC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iB0-4D-9cv"/>
+                    <navigationItem key="navigationItem" id="iB0-4D-9cv">
+                        <barButtonItem key="rightBarButtonItem" image="bar_cart_new" id="Alu-9S-1wm">
+                            <connections>
+                                <segue destination="Dul-rP-ChG" kind="show" id="k4T-vK-4hO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="UrV-P8-5su" id="S4L-gK-4fh"/>
                     </connections>
@@ -117,6 +127,183 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aed-zt-d1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1840.8" y="136.69950738916256"/>
+        </scene>
+        <!--CheckoutVC-->
+        <scene sceneID="MRv-7h-0wW">
+            <objects>
+                <viewController id="Dul-rP-ChG" customClass="CheckoutVC" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5hq-7M-vX6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH8-Nn-Cke" customClass="RoundedButton" customModule="Ecommerce" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lgs-kW-giQ"/>
+                                </constraints>
+                                <state key="normal" title="Place Order">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="placeOrderClicked:" destination="Dul-rP-ChG" eventType="touchUpInside" id="ZNT-SX-1Cw"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ct1-n4-jag">
+                                <rect key="frame" x="188.66666666666666" y="759" width="37" height="37"/>
+                                <color key="color" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HwM-29-2P6">
+                                <rect key="frame" x="20" y="567.66666666666663" width="374" height="199.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="76" translatesAutoresizingMaskIntoConstraints="NO" id="g7t-Yz-JsE">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6G-1N-Rye">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="35"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XO-mU-Apm">
+                                                <rect key="frame" x="262" y="0.0" width="112" height="35"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <state key="normal" title="Select Method">
+                                                    <color key="titleColor" red="0.94509803920000002" green="0.59999999999999998" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="paymentMethodClicked:" destination="Dul-rP-ChG" eventType="touchUpInside" id="Exi-sp-7tt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="n3u-YB-9nj">
+                                        <rect key="frame" x="0.0" y="43" width="374" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66F-Ng-G4Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="35"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jE-sD-t4B">
+                                                <rect key="frame" x="262" y="0.0" width="112" height="35"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <state key="normal" title="Select Method">
+                                                    <color key="titleColor" red="0.94509803920000002" green="0.59999999999999998" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shippingButtonClicked:" destination="Dul-rP-ChG" eventType="touchUpInside" id="hVi-W3-s9U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="Pvp-JK-ey6">
+                                        <rect key="frame" x="0.0" y="86" width="374" height="22.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uiu-TP-6dh">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-Cx-9ZB">
+                                                <rect key="frame" x="350.66666666666669" y="0.0" width="23.333333333333314" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="oeU-xg-Oix">
+                                        <rect key="frame" x="0.0" y="116.33333333333337" width="374" height="22.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing Fee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTV-Af-EEW">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBm-eV-0PL">
+                                                <rect key="frame" x="350.66666666666669" y="0.0" width="23.333333333333314" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="155" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-X3-tSR">
+                                        <rect key="frame" x="0.0" y="146.66666666666674" width="374" height="22.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipping Costs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-B8-Zb3">
+                                                <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-fr-V2e">
+                                                <rect key="frame" x="350.66666666666669" y="0.0" width="23.333333333333314" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="210" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-hj-1wY">
+                                        <rect key="frame" x="0.0" y="177" width="374" height="22.333333333333343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g31-Ne-Lv0">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.333333333333336" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKW-0I-YZ4">
+                                                <rect key="frame" x="346.66666666666669" y="0.0" width="27.333333333333314" height="22.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                <color key="textColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9mA-zL-NMw">
+                                <rect key="frame" x="20" y="108.00000000000003" width="374" height="439.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HwM-29-2P6" firstAttribute="leading" secondItem="U7O-Q5-sVP" secondAttribute="leading" constant="20" id="0T1-aK-r5c"/>
+                            <constraint firstItem="U7O-Q5-sVP" firstAttribute="trailing" secondItem="HwM-29-2P6" secondAttribute="trailing" constant="20" id="7iF-V6-kmD"/>
+                            <constraint firstItem="9mA-zL-NMw" firstAttribute="leading" secondItem="U7O-Q5-sVP" secondAttribute="leading" constant="20" id="8JU-43-O7i"/>
+                            <constraint firstItem="gH8-Nn-Cke" firstAttribute="top" secondItem="ct1-n4-jag" secondAttribute="bottom" constant="6" id="Md7-0N-3ID"/>
+                            <constraint firstItem="gH8-Nn-Cke" firstAttribute="top" secondItem="HwM-29-2P6" secondAttribute="bottom" constant="35" id="NFo-iF-TEF"/>
+                            <constraint firstItem="gH8-Nn-Cke" firstAttribute="leading" secondItem="U7O-Q5-sVP" secondAttribute="leading" constant="20" id="NJa-Hm-5GI"/>
+                            <constraint firstItem="HwM-29-2P6" firstAttribute="top" secondItem="9mA-zL-NMw" secondAttribute="bottom" constant="20" id="bsy-46-Xv9"/>
+                            <constraint firstItem="9mA-zL-NMw" firstAttribute="top" secondItem="U7O-Q5-sVP" secondAttribute="top" constant="20" id="dpY-wT-ePk"/>
+                            <constraint firstItem="ct1-n4-jag" firstAttribute="centerX" secondItem="5hq-7M-vX6" secondAttribute="centerX" id="ofC-cD-F0I"/>
+                            <constraint firstItem="U7O-Q5-sVP" firstAttribute="bottom" secondItem="gH8-Nn-Cke" secondAttribute="bottom" constant="20" id="uAo-Ai-Fdg"/>
+                            <constraint firstItem="U7O-Q5-sVP" firstAttribute="trailing" secondItem="9mA-zL-NMw" secondAttribute="trailing" constant="20" id="zQP-hQ-RRg"/>
+                            <constraint firstItem="U7O-Q5-sVP" firstAttribute="trailing" secondItem="gH8-Nn-Cke" secondAttribute="trailing" constant="20" id="zjJ-uV-eCy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U7O-Q5-sVP"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ct1-n4-jag" id="7vm-xa-fzm"/>
+                        <outlet property="paymentMethodButton" destination="8XO-mU-Apm" id="OJR-Fd-rXc"/>
+                        <outlet property="processLabel" destination="mBm-eV-0PL" id="aWi-9t-029"/>
+                        <outlet property="shipMethodButton" destination="8jE-sD-t4B" id="Koh-Yg-Bif"/>
+                        <outlet property="shippingLabel" destination="YPx-fr-V2e" id="Dxv-Y8-QGz"/>
+                        <outlet property="subtotalLabel" destination="zSB-Cx-9ZB" id="Y1M-f2-YNs"/>
+                        <outlet property="tableView" destination="9mA-zL-NMw" id="ALE-f7-Sw5"/>
+                        <outlet property="totalLabel" destination="TKW-0I-YZ4" id="Xz4-lT-CKW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nnQ-5k-fPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="-547"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZcT-LX-vSN">
@@ -148,6 +335,7 @@
         <image name="bar_cart_new" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="k4T-vK-4hO"/>
         <segue reference="euz-bk-4bD"/>
     </inferredMetricsTieBreakers>
 </document>

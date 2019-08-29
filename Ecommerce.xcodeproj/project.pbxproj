@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		54156F2923167780000C47AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EA7A0523158BE900153B76 /* User.swift */; };
 		54156F2C23168428000C47AC /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2B23168428000C47AC /* UserService.swift */; };
+		54156F2E2317CFAB000C47AC /* CheckoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2D2317CFAB000C47AC /* CheckoutVC.swift */; };
+		54156F312317D734000C47AC /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2F2317D734000C47AC /* CartItemCell.swift */; };
+		54156F322317D734000C47AC /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54156F302317D734000C47AC /* CartItemCell.xib */; };
 		541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89D2305445F00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89F23054B9800CB3D87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89E23054B9800CB3D87 /* Category.swift */; };
@@ -71,6 +74,9 @@
 		27DF2FD46FE14D2FF2177A24 /* Pods-EcommerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceTests/Pods-EcommerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		44AB254967108886F3204441 /* Pods-EcommerceAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceAdmin/Pods-EcommerceAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		54156F2B23168428000C47AC /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		54156F2D2317CFAB000C47AC /* CheckoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutVC.swift; sourceTree = "<group>"; };
+		54156F2F2317D734000C47AC /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		54156F302317D734000C47AC /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
 		541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		541DA89E23054B9800CB3D87 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5438C2EF22D792D2001E530A /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +244,7 @@
 				5442724D230B2B5F008E9637 /* ProductCell.xib */,
 				54427241230B0BE9008E9637 /* CategoryCell.xib */,
 				54ED7B30230C531D005AD8B3 /* CategoryTVCell.xib */,
+				54156F302317D734000C47AC /* CartItemCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 				5438C2F222D792D2001E530A /* AppDelegate.swift */,
 				5438C2F422D792D2001E530A /* HomeVC.swift */,
 				54427246230B2500008E9637 /* ProductsVC.swift */,
+				54156F2D2317CFAB000C47AC /* CheckoutVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				54427240230B0BE9008E9637 /* CategoryCell.swift */,
+				54156F2F2317D734000C47AC /* CartItemCell.swift */,
 				54C9FDF322E4D62F006F79D5 /* RoundedViews.swift */,
 				5442724C230B2B5F008E9637 /* ProductCell.swift */,
 				54ED7B2F230C531D005AD8B3 /* CategoryTVCell.swift */,
@@ -438,6 +447,7 @@
 				54427250230B2B5F008E9637 /* ProductCell.xib in Resources */,
 				54427244230B0BE9008E9637 /* CategoryCell.xib in Resources */,
 				54C9D75723112025001C5070 /* ProductDetailVC.xib in Resources */,
+				54156F322317D734000C47AC /* CartItemCell.xib in Resources */,
 				5438C2FA22D792D2001E530A /* Assets.xcassets in Resources */,
 				547F88B822DB975A008A3E39 /* GoogleService-Info.plist in Resources */,
 				5438C2F822D792D2001E530A /* Main.storyboard in Resources */,
@@ -582,7 +592,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54156F2E2317CFAB000C47AC /* CheckoutVC.swift in Sources */,
 				541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */,
+				54156F312317D734000C47AC /* CartItemCell.swift in Sources */,
 				541DA89F23054B9800CB3D87 /* Category.swift in Sources */,
 				54156F2C23168428000C47AC /* UserService.swift in Sources */,
 				547F88C722DE598F008A3E39 /* Extensions.swift in Sources */,
