@@ -27,7 +27,9 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 8: Add node cloud functions to protect sensitive data in preparation for stripe. Cloud function triggered when new user added, gets email from new user and asigns a stripe customer id to stripeId infirebase database. 
 
-### Step 9: Started work on shopping cart UI
+### Step 9: Started work on shopping cart UI, added products tableView, Payment/Shipping information buttons and price labels to show relevant totals. Add and remove from cart functionality using protocals. 
+
+<img src="cart.png" width="150" height="300"/>
 
 ## Key Learning
 
