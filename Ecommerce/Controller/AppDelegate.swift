@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         FirebaseApp.configure()
-        Stripe.setDefaultPublishableKey("pk_test_H229AROXbSPG3UD4UwDKWVYv")
+        STPPaymentConfiguration.shared().publishableKey = "pk_test_H229AROXbSPG3UD4UwDKWVYv"
         return true
     }
 

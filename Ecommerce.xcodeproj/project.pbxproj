@@ -13,6 +13,7 @@
 		54156F312317D734000C47AC /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2F2317D734000C47AC /* CartItemCell.swift */; };
 		54156F322317D734000C47AC /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54156F302317D734000C47AC /* CartItemCell.xib */; };
 		54156F352318623D000C47AC /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F342318623D000C47AC /* StripeCart.swift */; };
+		54167DE223199E0B0007872B /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54167DE123199E0B0007872B /* StripeApi.swift */; };
 		541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89D2305445F00CB3D87 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */; };
 		541DA89F23054B9800CB3D87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541DA89E23054B9800CB3D87 /* Category.swift */; };
@@ -79,6 +80,7 @@
 		54156F2F2317D734000C47AC /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
 		54156F302317D734000C47AC /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
 		54156F342318623D000C47AC /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
+		54167DE123199E0B0007872B /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		541DA89B230543AA00CB3D87 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		541DA89E23054B9800CB3D87 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5438C2EF22D792D2001E530A /* Ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				54156F342318623D000C47AC /* StripeCart.swift */,
+				54167DE123199E0B0007872B /* StripeApi.swift */,
 			);
 			path = Stripe;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54156F2E2317CFAB000C47AC /* CheckoutVC.swift in Sources */,
+				54167DE223199E0B0007872B /* StripeApi.swift in Sources */,
 				541DA89C230543AA00CB3D87 /* Firebase+Utils.swift in Sources */,
 				54156F312317D734000C47AC /* CartItemCell.swift in Sources */,
 				541DA89F23054B9800CB3D87 /* Category.swift in Sources */,
