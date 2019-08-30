@@ -14,6 +14,9 @@ import Kingfisher
 // Favorite button is delegate (told to do something)
 protocol ProductCellDelegate : class {
     func productFavorited(product: Product)
+    
+    // Add method to add to cart
+    func productAddedToCart(product: Product)
 }
 
 class ProductCell: UITableViewCell {
@@ -65,6 +68,8 @@ class ProductCell: UITableViewCell {
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {
+        delegate?.productAddedToCart(product: product)
+        // Disable button click while item is in cart
     }
     @IBAction func favoriteClicked(_ sender: Any) {
         delegate?.productFavorited(product: product)

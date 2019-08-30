@@ -7,18 +7,46 @@
 //
 
 import UIKit
+import Kingfisher
+
+protocol CartCellDelegate : class {
+    func productRemoved(product: Product)
+}
 
 class CartItemCell: UITableViewCell {
-
+    @IBOutlet weak var productImage: RoundedImageView!
+    @IBOutlet weak var productTitleLabel: UILabel!
+    @IBOutlet weak var removeItemButton: UIButton!
+    
+    weak var delegate : CartCellDelegate?
+    private var item : Product!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        productImage.layer.cornerRadius = 5
+    }
+    
+    func configureCell(product: Product, delegate: CartCellDelegate) {
+        
+        self.item = product
+        self.delegate = delegate
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productTitleLabel.text = "\(product.name) \(price)"
+        }
+        
+        if let url = URL(string: product.imageUrl){
+            productImage.kf.setImage(with: url)
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func removeItemClicked(_ sender: Any) {
+        delegate?.productRemoved(product: item)
     }
     
 }
