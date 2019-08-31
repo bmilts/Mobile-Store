@@ -76,6 +76,7 @@ class CheckoutVC: UIViewController, CartCellDelegate {
     }
     
     @IBAction func shippingButtonClicked(_ sender: Any) {
+        paymentContext.pushShippingViewController()
     }
     
     @IBAction func placeOrderClicked(_ sender: Any) {
