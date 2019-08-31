@@ -31,6 +31,10 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="cart.png" width="150" height="300"/>
 
+### Step 10: Use stripe payment method and shipping method UI. In addition Initialized customContext with stripeApi class, sends stripe version and ID via cloud functions via firestore to stripe. Returns an ephemeral key for use with sale, this grabs stripe customer object for user card details and shipping details to be used or saved with stripe.
+
+<img src="card.png" width="150" height="300"/> <img src="shipping.png" width="150" height="300"/>
+
 ## Key Learning
 
 * Storyboard building/Auto Layout/Stackviews
