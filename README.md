@@ -35,6 +35,8 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 <img src="card.png" width="150" height="300"/> <img src="shipping.png" width="150" height="300"/>
 
+### Step 11: Client side code for handling stripe payment, didCreatePayment sends data to stripe, stripe response sent back, to finish in didFinishWith to see if payment was successful or not.
+
 ## Key Learning
 
 * Storyboard building/Auto Layout/Stackviews
