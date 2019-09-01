@@ -18,6 +18,7 @@ struct Product {
     var imageUrl: String
     var timeStamp: Timestamp
     var stock: Int
+    // var weight: Int
     
     // Default initializer 
     init(name: String,
