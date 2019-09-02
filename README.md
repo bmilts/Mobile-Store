@@ -37,6 +37,16 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 
 ### Step 11: Client side code for handling stripe payment, didCreatePayment sends data to stripe, stripe response sent back, to finish in didFinishWith to see if payment was successful or not.
 
+### Step 12: Firebase security rules, added create rights for logged in user and added admin rights to logged in admin user within admin app.
+
+### Step 13: UI Clean up making application run smoother by reducing image sizes
+
+### Step 14: (Necessary improvements) In process of adding extra features. Firstly adding a remove from database when item is purchased, secondly adding a weight to items for a shipping fee calculator in basket.
+
+### Step 15: (Planned) implement end to end tests to check Guest functionality/User Register/Log in, Add and remove from cart, User purchase.
+
+### Future Improvements: Facebook and apple login, Firebase email on product purchase, Firebase live chat with users for any customer issues or notifications on phone via firebase when item is purchased or shipped.
+
 ## Key Learning
 
 * Storyboard building/Auto Layout/Stackviews
@@ -57,5 +67,6 @@ Building an E-commerce (and Admin) application for my friend to sell his pottery
 * Initialized firestore cloud storage to turn image into data upload category image data from admin app to use in both apps
 * Conditional UI segues using prepare for segue function. To destination Add category/product
 * Create user service singleton for entire app access to user favorited functionality
+* Firebase security and read/update/create/delete
 
 
