@@ -139,7 +139,7 @@ extension CheckoutVC : STPPaymentContextDelegate {
             "idemPotency": idemPotency
         ]
         
-        Functions.functions().httpsCallable("makeCharge").call(data) { (result, error) in
+        Functions.functions().httpsCallable("createCharge").call(data) { (result, error) in
             
             if let error = error {
                 debugPrint(error.localizedDescription)
@@ -155,20 +155,21 @@ extension CheckoutVC : STPPaymentContextDelegate {
         }
     }
     
+    // TODO
     func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
         
         let title: String
         let message: String
         
+        activityIndicator.stopAnimating()
+        
         switch status {
         case .error:
-            activityIndicator.stopAnimating()
             title = "Error"
             message = error?.localizedDescription ?? ""
         case .success:
-            activityIndicator.stopAnimating()
             title = "Success!"
-            message = "Thank you for your purchase."
+            message = "Thank you for your purchase. Ryan loves you!"
         case .userCancellation:
             return
         }

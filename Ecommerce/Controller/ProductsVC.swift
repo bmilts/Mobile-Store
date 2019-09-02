@@ -74,7 +74,7 @@ class ProductsVC: UIViewController, ProductCellDelegate {
     func productFavorited(product: Product) {
         
         if UserService.isGuest {
-            simpleAlert(title: "Error", message: "Please register/login to favorite a product.")
+            simpleAlert(title: "Hello from Ryan!", message: "Please register/login to favorite a product.")
         } else {
             UserService.favoriteSelected(product: product)
             guard let index = products.firstIndex(of: product) else { return }
@@ -87,7 +87,7 @@ class ProductsVC: UIViewController, ProductCellDelegate {
     func productAddedToCart(product: Product) {
         
         if UserService.isGuest {
-            simpleAlert(title: "Error", message: "Please register/login to add a product to cart.")
+            simpleAlert(title: "Hello from Ryan!", message: "Please register/login to add a product to cart.")
         } else {
             StripeCart.addItemToCart(item: product)
 //            guard let index = products.firstIndex(of: product) else { return }

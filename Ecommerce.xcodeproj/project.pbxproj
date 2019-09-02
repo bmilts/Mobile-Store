@@ -44,6 +44,8 @@
 		54427259230BD708008E9637 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9FDF322E4D62F006F79D5 /* RoundedViews.swift */; };
 		5442725A230BD70E008E9637 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C622DE598F008A3E39 /* Extensions.swift */; };
 		5442725B230BD710008E9637 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9FDF022E4A696006F79D5 /* Constants.swift */; };
+		54595B5B231CEA7100D38636 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2B23168428000C47AC /* UserService.swift */; };
+		54595B5C231CEA9F00D38636 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F342318623D000C47AC /* StripeCart.swift */; };
 		545DF72723127519004A62DD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5438C2F422D792D2001E530A /* HomeVC.swift */; };
 		545DF72823127B47004A62DD /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C9D75523112025001C5070 /* ProductDetailVC.xib */; };
 		545DF72923127B4C004A62DD /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9D75423112025001C5070 /* ProductDetailVC.swift */; };
@@ -651,7 +653,9 @@
 				5438C32722D79359001E530A /* AppDelegate.swift in Sources */,
 				541DA8A023054B9800CB3D87 /* Category.swift in Sources */,
 				54EA7A0623158BE900153B76 /* User.swift in Sources */,
+				54595B5B231CEA7100D38636 /* UserService.swift in Sources */,
 				5442724F230B2B5F008E9637 /* ProductCell.swift in Sources */,
+				54595B5C231CEA9F00D38636 /* StripeCart.swift in Sources */,
 				5442724B230B258C008E9637 /* Product.swift in Sources */,
 				545DF72923127B4C004A62DD /* ProductDetailVC.swift in Sources */,
 			);
