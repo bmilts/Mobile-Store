@@ -62,7 +62,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="bar_cart_new" id="vIr-p0-7xe">
                                 <connections>
-                                    <segue destination="Dul-rP-ChG" kind="show" id="WcF-hN-cEa"/>
+                                    <action selector="cartClicked:" destination="BYZ-38-t0r" id="Heg-sb-QYt"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="barHeartS" id="nvH-ck-K7Z">
@@ -78,6 +78,7 @@
                         <outlet property="tableView" destination="vtk-9x-WYu" id="3g3-Aa-4zH"/>
                         <segue destination="MLT-4i-LGW" kind="show" identifier="toProductsVC" id="MB5-np-seS"/>
                         <segue destination="MLT-4i-LGW" kind="show" identifier="ToFavorites" id="euz-bk-4bD"/>
+                        <segue destination="Dul-rP-ChG" kind="show" identifier="HomeToCheckout" id="caC-vt-8xT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,12 +117,13 @@
                     <navigationItem key="navigationItem" id="iB0-4D-9cv">
                         <barButtonItem key="rightBarButtonItem" image="bar_cart_new" id="Alu-9S-1wm">
                             <connections>
-                                <segue destination="Dul-rP-ChG" kind="show" id="k4T-vK-4hO"/>
+                                <action selector="cartClicked:" destination="MLT-4i-LGW" id="7gt-hI-gYa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="UrV-P8-5su" id="S4L-gK-4fh"/>
+                        <segue destination="Dul-rP-ChG" kind="show" identifier="ProductToCheckout" id="qUc-vP-cjC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aed-zt-d1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -335,7 +337,7 @@
         <image name="bar_cart_new" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k4T-vK-4hO"/>
+        <segue reference="caC-vt-8xT"/>
         <segue reference="euz-bk-4bD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -57,6 +57,10 @@ final class _StripeCart {
 //
 //    }
     
+    // func itemPurchasedRemove() {
+    
+// }
+    
     func clearCart() {
         cartItems.removeAll()
     }

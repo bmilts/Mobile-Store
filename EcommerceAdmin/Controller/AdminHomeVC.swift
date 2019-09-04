@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AdminHomeVC: HomeVC {
 
@@ -14,6 +15,8 @@ class AdminHomeVC: HomeVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        setUpAdminUser()
+        // Block Login button
         navigationItem.leftBarButtonItem?.isEnabled = false
         
         // Initialize and add right bar button item
@@ -25,7 +28,18 @@ class AdminHomeVC: HomeVC {
     @objc func addCategory() {
         performSegue(withIdentifier: Segues.ToAddEditCategory, sender: self)
     }
-
-
+    
+    func setUpAdminUser() {
+            // Sign in admin
+        Auth.auth().signIn(withEmail: "ryanpder@gmail.com", password: "Test1234") { user, error in
+            
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                Auth.auth().handleFireAuthError(error: error, vc: self)
+                return
+            }
+            
+        }
+    }
 }
 

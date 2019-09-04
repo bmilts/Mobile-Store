@@ -211,6 +211,12 @@ extension CheckoutVC : STPPaymentContextDelegate {
         royalMail.detail = "UK wide arrives 3-7 days"
         royalMail.identifier = "royal_mail"
         
+        // Add free pickup if local in sydney australia
+        
+        // add calculated amount based on shipping
+        
+        // Calculated amount for US, AU 
+        
         if address.country == "US" {
             completion(.valid, nil, [upsGround, fedEx], fedEx)
         } else if address.country == "AU" {

@@ -71,6 +71,16 @@ class ProductsVC: UIViewController, ProductCellDelegate {
         })
     }
     
+    @IBAction func cartClicked(_ sender: Any) {
+        
+        if UserService.isGuest {
+            simpleAlert(title: "Hello from Ryan!", message: "Please register/login to visit the checkout.")
+            return
+        }
+        
+        performSegue(withIdentifier: Segues.ProductToCheckout, sender: self)
+    }
+    
     func productFavorited(product: Product) {
         
         if UserService.isGuest {
@@ -150,8 +160,8 @@ extension ProductsVC: UITableViewDelegate, UITableViewDataSource {
         let vc = ProductDetailVC()
         let selectProduct = products[indexPath.row]
         vc.product = selectProduct
-        vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }
     

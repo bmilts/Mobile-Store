@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginVC-->
+        <!--Love Ryan Login-->
         <scene sceneID="VLP-xp-BPc">
             <objects>
                 <viewController id="aRC-7e-PAr" customClass="LoginVC" customModule="Ecommerce" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NYo-TG-9zZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Bye-zb-Hzk"/>
+                    <navigationItem key="navigationItem" title="Love Ryan Login" id="Bye-zb-Hzk"/>
                     <connections>
                         <outlet property="activityIndicator" destination="9ct-xG-1Wl" id="vrc-ZF-m8L"/>
                         <outlet property="emailText" destination="dAx-ne-AlJ" id="2lG-ca-eBi"/>
@@ -261,6 +261,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFH-iV-ATk">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.16078431369999999" green="0.16078431369999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                            <color key="textColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -125,6 +125,16 @@ class HomeVC: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
+    @IBAction func cartClicked(_ sender: Any) {
+        
+        if UserService.isGuest {
+            simpleAlert(title: "Hello from Ryan!", message: "Please register/login to visit the checkout.")
+            return
+        }
+        
+        performSegue(withIdentifier: Segues.HomeToCheckout, sender: self)
+    }
+    
     @IBAction func favoritesClicked(_ sender: Any) {
         
         if UserService.isGuest {
