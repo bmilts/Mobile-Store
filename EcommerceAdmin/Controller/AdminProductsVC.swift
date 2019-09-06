@@ -20,6 +20,9 @@ class AdminProductsVC: ProductsVC {
         let editCategoryButton = UIBarButtonItem(title: "Edit Category", style: .plain, target: self, action: #selector(editCategory))
         let newProductButton = UIBarButtonItem(title: "Add Product", style: .plain, target: self, action: #selector(newProduct))
         navigationItem.setRightBarButtonItems([editCategoryButton, newProductButton], animated: false)
+        
+        // **** EDIT TABLEVIEW ****
+        // tableView.allowsMultipleSelectionDuringEditing = true
     }
     
     @objc func editCategory() {
@@ -37,6 +40,19 @@ class AdminProductsVC: ProductsVC {
         performSegue(withIdentifier: Segues.ToAddEditProduct, sender: self)
         
     }
+    
+    // **** EDIT AND DELETE TABLEVIEW
+    
+    // Display functionality
+//    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
+//
+    // Delete product row
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//
+//        print(indexPath.row)
+//    }
     
     // Prepare for segue depending on editing category or product
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

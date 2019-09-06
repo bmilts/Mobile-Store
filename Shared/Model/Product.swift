@@ -17,8 +17,8 @@ struct Product {
     var productDescription: String
     var imageUrl: String
     var timeStamp: Timestamp
-    var stock: Int
-    // var weight: Int
+    var sold: Bool = false
+    var weight: Double
     
     // Default initializer 
     init(name: String,
@@ -28,7 +28,9 @@ struct Product {
         productDescription: String,
         imageUrl: String,
         timeStamp: Timestamp,
-        stock: Int = 0) {
+        sold: Bool = false,
+        weight: Double
+        ) {
         
         self.name = name
         self.id = id
@@ -37,7 +39,8 @@ struct Product {
         self.productDescription = productDescription
         self.imageUrl = imageUrl
         self.timeStamp = timeStamp
-        self.stock = stock
+        self.sold = sold
+        self.weight = weight
     }
     
     init(data: [String : Any]) {
@@ -50,8 +53,10 @@ struct Product {
         self.productDescription = data["productDescription"] as? String ?? ""
         self.imageUrl = data["imageUrl"] as? String ?? ""
         self.timeStamp = data["timeStamp"] as? Timestamp ?? Timestamp()
-        self.stock = data["stock"] as? Int ?? 0
+        self.sold = data["sold"] as? Bool ?? false
+        self.weight = data["weight"] as? Double ?? 0.0
     }
+    
     
     // Convert JSON data model to key value pair for firestore
     static func modelToData(product: Product) -> [String: Any] {
@@ -63,7 +68,8 @@ struct Product {
               "productDescription": product.productDescription,
               "imageUrl": product.imageUrl,
               "timeStamp": product.timeStamp,
-              "stock": product.stock
+              "sold": product.sold,
+              "weight": product.weight,
           ]
           
           return data

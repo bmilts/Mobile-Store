@@ -20,14 +20,21 @@ class AdminHomeVC: HomeVC {
         navigationItem.leftBarButtonItem?.isEnabled = false
         
         // Initialize and add right bar button item
-        let addCategoryButton = UIBarButtonItem(title: "Add Category", style: .plain, target: self, action: #selector(addCategory))
-        navigationItem.rightBarButtonItem = addCategoryButton
+        let addCategoryButton = UIBarButtonItem(title: "Category", style: .plain, target: self, action: #selector(addCategory))
+        //navigationItem.rightBarButtonItem = addCategoryButton
+        
+        let ordersButton = UIBarButtonItem(image: UIImage(named: AppImages.Sent), style: .plain, target: self, action: #selector(showSold))
+        navigationItem.setRightBarButtonItems([addCategoryButton, ordersButton], animated: false)
         
     }
     
     @objc func addCategory() {
         performSegue(withIdentifier: Segues.ToAddEditCategory, sender: self)
     }
+    
+     @objc func showSold() {
+        //performSegue(withIdentifier: Segues.ToSales, sender: self)
+     }
     
     func setUpAdminUser() {
             // Sign in admin

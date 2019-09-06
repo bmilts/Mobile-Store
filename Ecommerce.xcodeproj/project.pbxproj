@@ -47,7 +47,6 @@
 		54595B5B231CEA7100D38636 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F2B23168428000C47AC /* UserService.swift */; };
 		54595B5C231CEA9F00D38636 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54156F342318623D000C47AC /* StripeCart.swift */; };
 		54595B5D231E81B300D38636 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547F88C122DBA0BE008A3E39 /* LoginVC.swift */; };
-		54595B5F231E8AAB00D38636 /* AdminLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54595B5E231E8AAB00D38636 /* AdminLoginVC.swift */; };
 		54595B60231ECB4800D38636 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B75A5822ED9A6D00F6B7BB /* ForgotPasswordVC.swift */; };
 		545DF72723127519004A62DD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5438C2F422D792D2001E530A /* HomeVC.swift */; };
 		545DF72823127B47004A62DD /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54C9D75523112025001C5070 /* ProductDetailVC.xib */; };
@@ -112,7 +111,6 @@
 		54427249230B258C008E9637 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5442724C230B2B5F008E9637 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		5442724D230B2B5F008E9637 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
-		54595B5E231E8AAB00D38636 /* AdminLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginVC.swift; sourceTree = "<group>"; };
 		547F88B722DB975A008A3E39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		547F88B922DB9869008A3E39 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		547F88C122DBA0BE008A3E39 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -350,7 +348,6 @@
 				54FF6A4E231288A700C2B616 /* AddEditCategoryVC.swift */,
 				54A2BC2D23142B3800B17095 /* AdminProductsVC.swift */,
 				54EA7A03231454EF00153B76 /* AddEditProductsVC.swift */,
-				54595B5E231E8AAB00D38636 /* AdminLoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -644,7 +641,6 @@
 			files = (
 				54595B5D231E81B300D38636 /* LoginVC.swift in Sources */,
 				54427248230B2509008E9637 /* ProductsVC.swift in Sources */,
-				54595B5F231E8AAB00D38636 /* AdminLoginVC.swift in Sources */,
 				5442725B230BD710008E9637 /* Constants.swift in Sources */,
 				541DA89D2305445F00CB3D87 /* Firebase+Utils.swift in Sources */,
 				5438C32922D79359001E530A /* AdminHomeVC.swift in Sources */,

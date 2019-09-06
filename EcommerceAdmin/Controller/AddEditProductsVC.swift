@@ -16,6 +16,8 @@ class AddEditProductsVC: UIViewController {
     @IBOutlet weak var productNameText: UITextField!
     @IBOutlet weak var productPriceText: UITextField!
     @IBOutlet weak var productDescText: UITextView!
+    @IBOutlet weak var productWeightText: UITextField!
+    
     @IBOutlet weak var productImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var addButton: RoundedButton!
@@ -26,6 +28,7 @@ class AddEditProductsVC: UIViewController {
     var productName = ""
     var productPrice = 0.0
     var productDescription = ""
+    var productWeight = 0.0
     
 
     override func viewDidLoad() {
@@ -42,6 +45,7 @@ class AddEditProductsVC: UIViewController {
             productNameText.text = product.name
             productPriceText.text = String(product.price)
             productDescText.text = product.productDescription
+            productWeightText.text = String(product.weight)
             addButton.setTitle("Save Changes", for: .normal)
             
             if let url = URL(string: product.imageUrl) {
@@ -60,6 +64,9 @@ class AddEditProductsVC: UIViewController {
         uploadImageThenDocument()
     }
     
+    @IBAction func deleteButtonClicked(_ sender: Any) {
+    }
+    
     func uploadImageThenDocument() {
          
         // Check fields are not null
@@ -67,6 +74,8 @@ class AddEditProductsVC: UIViewController {
             let productName = productNameText.text , productName.isNotEmpty ,
             let priceString = productPriceText.text ,
             let productPrice = Double(priceString) ,
+            let weightString = productWeightText.text ,
+            let productWeight = Double(weightString) ,
             let productDescription = productDescText.text, productDescription.isNotEmpty else {
                 simpleAlert(title: "Error", message: "Please complete all fields.")
                 return
@@ -74,6 +83,7 @@ class AddEditProductsVC: UIViewController {
         
         self.productName = productName
         self.productPrice = productPrice
+        self.productWeight = productWeight
         self.productDescription = productDescription
         
         activityIndicator.startAnimating()
@@ -117,7 +127,10 @@ class AddEditProductsVC: UIViewController {
     func uploadDocument(url: String) {
         var docRef: DocumentReference!
         // Create initializer in product model
-        var product = Product.init(name: productName, id: "", category: selectedCategory.id, price: productPrice, productDescription: productDescription, imageUrl: url, timeStamp: Timestamp())
+//        var product = Product.init(name: productName, id: "", category: selectedCategory.id, price: productPrice, productDescription: productDescription, imageUrl: url, timeStamp: Timestamp())
+        
+        var product = Product.init(name: productName, id: "", category: selectedCategory.id, price: productPrice, productDescription: productDescription, imageUrl: url, timeStamp: Timestamp(), weight: productWeight)
+        
         
         if let productToEdit = productToEdit {
             docRef = Firestore.firestore().collection("products").document(productToEdit.id)
@@ -140,6 +153,10 @@ class AddEditProductsVC: UIViewController {
             self.navigationController?.popViewController(animated: true)
 
         }
+    }
+    
+    func deleteDocument() {
+        
     }
     
     func handleError(error: Error, msg: String) {

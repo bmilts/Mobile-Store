@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 let StripeCart = _StripeCart()
 
@@ -57,9 +58,16 @@ final class _StripeCart {
 //
 //    }
     
-    // func itemPurchasedRemove() {
+//    func itemSold() {
+//        for item in cartItems {
+//
+//        }
+//        
+//        let value =
+//        let ref = FIRDatabase.database().reference().root.child("users").child(uid).updateChildValues(["Places": values])
+//        
+//    }
     
-// }
     
     func clearCart() {
         cartItems.removeAll()

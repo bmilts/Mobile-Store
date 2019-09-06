@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 // Product VC is saying yes I will be delegate
 class ProductsVC: UIViewController, ProductCellDelegate {
@@ -21,6 +22,7 @@ class ProductsVC: UIViewController, ProductCellDelegate {
     var db: Firestore!
     var listener: ListenerRegistration!
     var showFavorites = false
+    var showPurchases = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +41,13 @@ class ProductsVC: UIViewController, ProductCellDelegate {
     
     func setProductListener() {
         
+        // Add else if show purchases 
         var ref: Query!
         if showFavorites {
             ref = db.collection("users").document(UserService.user.id).collection("favorites")
         } else {
+            
+            // change query to only show products with sold false id
             ref = db.products(category: category.id)
         }
         

@@ -16,8 +16,9 @@ extension Firestore {
     }
     
     func products(category: String) -> Query {
-        return collection("products").whereField("category", isEqualTo: category).order(by: "timeStamp", descending: true)
+        return collection("products").whereField("category", isEqualTo: category).whereField("sold", isEqualTo: false).order(by: "timeStamp", descending: true)
     }
+    
 }
 
 extension Auth {

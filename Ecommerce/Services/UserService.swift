@@ -22,6 +22,7 @@ final class _UserService {
     let db = Firestore.firestore()
     var userListener : ListenerRegistration? = nil
     var faveListener : ListenerRegistration? = nil
+    // var soldLister : ListenerRegistration? = nil
     
     // Computed property
     var isGuest : Bool {

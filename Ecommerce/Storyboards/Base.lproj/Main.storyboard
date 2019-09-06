@@ -60,6 +60,7 @@
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
+                            <barButtonItem image="sent" id="qN0-Q5-tYd"/>
                             <barButtonItem image="bar_cart_new" id="vIr-p0-7xe">
                                 <connections>
                                     <action selector="cartClicked:" destination="BYZ-38-t0r" id="Heg-sb-QYt"/>
@@ -335,6 +336,7 @@
     <resources>
         <image name="barHeartS" width="21.333333969116211" height="21.333333969116211"/>
         <image name="bar_cart_new" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="sent" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="caC-vt-8xT"/>

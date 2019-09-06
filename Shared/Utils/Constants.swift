@@ -24,6 +24,7 @@ struct AppImages {
     static let Heart = "heart"
     static let FilledHeart = "heartf"
     static let Placeholder = "Placeholder"
+    static let Sent = "sent"
 }
 
 struct AppColors {
