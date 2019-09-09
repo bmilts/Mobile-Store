@@ -17,12 +17,16 @@ final class _UserService {
     
     // User information variables
     var user = User()
+    
+    // Store favorites and sales
     var favorites = [Product]()
+    var sales = [Product]()
+    
     let auth = Auth.auth()
     let db = Firestore.firestore()
     var userListener : ListenerRegistration? = nil
     var faveListener : ListenerRegistration? = nil
-    // var soldLister : ListenerRegistration? = nil
+    var soldLister : ListenerRegistration? = nil
     
     // Computed property
     var isGuest : Bool {
@@ -96,4 +100,5 @@ final class _UserService {
         }
         
     }
+
 }

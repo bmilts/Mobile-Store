@@ -170,6 +170,8 @@ extension CheckoutVC : STPPaymentContextDelegate {
         case .success:
             title = "Success!"
             message = "Thank you for your purchase. Ryan loves you!"
+            
+            // Update firebase variable
         case .userCancellation:
             return
         }
@@ -186,24 +188,45 @@ extension CheckoutVC : STPPaymentContextDelegate {
     // Set shipping methods
     func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
         
+        let weight = StripeCart.itemsWeight
+        
+        let ausPost = PKShippingMethod()
+        ausPost.label = "Australia Post"
+        ausPost.detail = "Austrailia wide arrives 3-7 days"
+        ausPost.identifier = "aus_post"
+        
+        if weight > 0 && weight <= 3.00 {
+            ausPost.amount = 17.45
+        } else if weight > 3.00 && weight <= 5.00 {
+            ausPost.amount = 19.85
+        } else if weight > 5.00 && weight <= 10.00 {
+            ausPost.amount = 25.85
+        } else if weight > 10.00 && weight <= 15.00 {
+            ausPost.amount = 31.85
+        } else if weight > 15.00 && weight <= 20.00 {
+            ausPost.amount = 37.85
+        } else {
+            ausPost.amount = 45.99
+        }
+        
+        let ryanDer = PKShippingMethod()
+        ryanDer.amount = 0.00
+        ryanDer.label = "Pick up from Ryan"
+        ryanDer.detail = "Organise to pick up!"
+        ryanDer.identifier = "ryan_der"
+        
         // Shipping method for delivering physical goods
         let upsGround = PKShippingMethod()
-        upsGround.amount = 5.99
+        upsGround.amount = 40.00
         upsGround.label = "UPS Ground"
         upsGround.detail = "Arrives in 3-7 days"
         upsGround.identifier = "ups_ground"
         
         let fedEx = PKShippingMethod()
-        fedEx.amount = 10.99
+        fedEx.amount = 30.99
         fedEx.label = "FedEx"
-        fedEx.detail = "Arrives tomorrow"
+        fedEx.detail = "Arrives 7-10 days"
         fedEx.identifier = "fedex"
-        
-        let ausPost = PKShippingMethod()
-        ausPost.amount = 4.99
-        ausPost.label = "Australia Post"
-        ausPost.detail = "Austrailia wide arrives 3-7 days"
-        ausPost.identifier = "aus_post"
         
         let royalMail = PKShippingMethod()
         royalMail.amount = 6.99
@@ -220,7 +243,7 @@ extension CheckoutVC : STPPaymentContextDelegate {
         if address.country == "US" {
             completion(.valid, nil, [upsGround, fedEx], fedEx)
         } else if address.country == "AU" {
-            completion(.valid, nil, [ausPost], ausPost)
+            completion(.valid, nil, [ausPost, ryanDer], ausPost)
         } else if address.country == "GB" {
             completion(.valid, nil, [royalMail], royalMail)
         } else {

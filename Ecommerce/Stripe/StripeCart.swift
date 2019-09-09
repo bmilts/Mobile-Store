@@ -29,6 +29,16 @@ final class _StripeCart {
         return amount
     }
     
+    var itemsWeight: Double {
+        var weight = 0.0
+        
+        for item in cartItems {
+            let weights = item.weight
+            weight += weights
+        }
+        return weight
+    }
+    
     var processingFees: Int {
         
         if subtotal == 0 {
@@ -54,17 +64,16 @@ final class _StripeCart {
         }
     }
     
-//    func calculateDelivery() {
-//
-//    }
-    
 //    func itemSold() {
+//        
+//        
+//        
+//        
 //        for item in cartItems {
 //
 //        }
 //        
 //        let value =
-//        let ref = FIRDatabase.database().reference().root.child("users").child(uid).updateChildValues(["Places": values])
 //        
 //    }
     

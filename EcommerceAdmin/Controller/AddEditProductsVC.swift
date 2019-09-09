@@ -138,6 +138,8 @@ class AddEditProductsVC: UIViewController {
         } else {
             docRef = Firestore.firestore().collection("products").document()
             product.id = docRef.documentID
+            
+          //  let ref =  FIRDatabase.database().reference().root.child("users").child(uid).updateChildValues()
         }
         
         let data = Product.modelToData(product: product)
