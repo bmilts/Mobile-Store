@@ -1,5 +1,5 @@
 # Mobile Store (Love Ryan Ceramics)
-Building an E-commerce (and Admin) application for my friend to sell his pottery. App will integrate Firebase/Firestore/Kingfisher and Stripe
+Created an E-commerce (and Admin) application for a client to sell his pottery. App will integrate Firebase/Firestore/Kingfisher and Stripe. The application is in testing, before release on the app store. Currently adding a shipping calculator, and some essential after sales functions. 
 
 ## Completed initial application user journey below.
 
