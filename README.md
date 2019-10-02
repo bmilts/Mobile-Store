@@ -3,6 +3,10 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 ## Completed initial application user journey below.
 
+<img src="test.png" width="150" height="300"/>
+
+## Creation Steps:
+
 ## Step 1: Created initial Login and Registration front end
 
 <img src="initial.png" width="500" height="350" />
