@@ -9,6 +9,7 @@
 import UIKit
 import Stripe
 import FirebaseFunctions
+import FirebaseFirestore
 
 class CheckoutVC: UIViewController, CartCellDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -22,6 +23,10 @@ class CheckoutVC: UIViewController, CartCellDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var paymentContext: STPPaymentContext!
+    var weight = StripeCart.itemsWeight
+    
+    // Testing update sold item functionality
+    // var itemIds = StripeCart.itemIds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +50,18 @@ class CheckoutVC: UIViewController, CartCellDelegate {
         totalLabel.text = StripeCart.total.penniesToFormattedCurrency()
     }
     
-    func productRemoved(product: Product){
+    func productRemoved(product: Product) {
         StripeCart.removeItemFromCart(item: product)
         tableView.reloadData()
         setUpPaymentInfo()
         paymentContext.paymentAmount = StripeCart.total
     }
     
+    func productPurchased(product: Product) {
+        StripeCart.itemSold(item: product)
+    }
+    
     func setupStripeConfig() {
-        
         let config = STPPaymentConfiguration.shared()
         config.createCardSources = true
         config.requiredBillingAddressFields = .none
@@ -84,6 +92,7 @@ class CheckoutVC: UIViewController, CartCellDelegate {
         paymentContext.requestPayment()
         activityIndicator.startAnimating()
     }
+    
 }
 
 extension CheckoutVC : STPPaymentContextDelegate {
@@ -168,6 +177,7 @@ extension CheckoutVC : STPPaymentContextDelegate {
             title = "Error"
             message = error?.localizedDescription ?? ""
         case .success:
+            // productPurchased(product: )
             title = "Success!"
             message = "Thank you for your purchase. Ryan loves you!"
             
@@ -185,29 +195,36 @@ extension CheckoutVC : STPPaymentContextDelegate {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func shippingCalculator() -> NSDecimalNumber {
+        
+        var amount: NSDecimalNumber = 0.00
+        
+        if weight > 0 && weight <= 3.00 {
+            amount = 17.45
+        } else if weight > 3.00 && weight <= 5.00 {
+            amount = 19.85
+        } else if weight > 5.00 && weight <= 10.00 {
+            amount = 25.85
+        } else if weight > 10.00 && weight <= 15.00 {
+            amount = 31.85
+        } else if weight > 15.00 && weight <= 20.00 {
+            amount = 37.85
+        } else {
+            amount = 45.99
+        }
+        
+        return amount
+    }
+    
     // Set shipping methods
     func paymentContext(_ paymentContext: STPPaymentContext, didUpdateShippingAddress address: STPAddress, completion: @escaping STPShippingMethodsCompletionBlock) {
-        
-        let weight = StripeCart.itemsWeight
         
         let ausPost = PKShippingMethod()
         ausPost.label = "Australia Post"
         ausPost.detail = "Austrailia wide arrives 3-7 days"
         ausPost.identifier = "aus_post"
+        ausPost.amount = shippingCalculator()
         
-        if weight > 0 && weight <= 3.00 {
-            ausPost.amount = 17.45
-        } else if weight > 3.00 && weight <= 5.00 {
-            ausPost.amount = 19.85
-        } else if weight > 5.00 && weight <= 10.00 {
-            ausPost.amount = 25.85
-        } else if weight > 10.00 && weight <= 15.00 {
-            ausPost.amount = 31.85
-        } else if weight > 15.00 && weight <= 20.00 {
-            ausPost.amount = 37.85
-        } else {
-            ausPost.amount = 45.99
-        }
         
         let ryanDer = PKShippingMethod()
         ryanDer.amount = 0.00
@@ -243,7 +260,7 @@ extension CheckoutVC : STPPaymentContextDelegate {
         if address.country == "US" {
             completion(.valid, nil, [upsGround, fedEx], fedEx)
         } else if address.country == "AU" {
-            completion(.valid, nil, [ausPost, ryanDer], ausPost)
+            completion(.valid, nil, [ryanDer], ryanDer)
         } else if address.country == "GB" {
             completion(.valid, nil, [royalMail], royalMail)
         } else {

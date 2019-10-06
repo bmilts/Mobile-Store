@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 let StripeCart = _StripeCart()
 
@@ -15,6 +16,7 @@ final class _StripeCart {
     
     // Stripe variables
     var cartItems = [Product]()
+    // var itemIds = [Product]()
     private let stripeCreditCardCut = 0.029
     private let flatFeeCents = 30
     var shippingFees = 0
@@ -28,6 +30,18 @@ final class _StripeCart {
         }
         return amount
     }
+    
+//    var itemAddId: [String] {
+//        var id = ""
+//        var itemIds = [String]()
+//
+//        for item in cartItems {
+//            id = item.id
+//            itemIds.append(id)
+//        }
+//
+//        return itemIds
+//    }
     
     var itemsWeight: Double {
         var weight = 0.0
@@ -56,30 +70,37 @@ final class _StripeCart {
     
     func addItemToCart(item: Product) {
         cartItems.append(item)
+        // itemIds.append(item.id)
+        // print(itemIds)
     }
     
     func removeItemFromCart(item: Product) {
         if let index = cartItems.firstIndex(of: item) {
             cartItems.remove(at: index)
+            // itemIds.remove(at: index)
+            // print(itemIds)
         }
     }
     
-//    func itemSold() {
-//        
-//        
-//        
-//        
-//        for item in cartItems {
-//
-//        }
-//        
-//        let value =
-//        
-//    }
-    
+    func itemSold(item: Product) {
+        
+        // Add batch 
+        let updateRef = Firestore.firestore().collection("products").document(item.id)
+        updateRef.updateData([
+            "sold": true
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+        
+    }
     
     func clearCart() {
         cartItems.removeAll()
+        // itemIds.removeAll()
     }
     
 }
