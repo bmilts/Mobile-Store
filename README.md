@@ -25,8 +25,7 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # Purchase product flow, stripe card, address and completed purchase:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
  
 ## Completed initial admin flow:
 
