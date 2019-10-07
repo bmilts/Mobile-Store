@@ -13,39 +13,50 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # View and add product to cart:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/><img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
 
-# Purchase product:
+# Add product to cart:
 
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+
+# Favorite product and see favourites list
+
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+
+# Purchase product flow, stripe card, address and completed purchase:
+
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
+ 
 ## Completed initial admin flow:
 
 # Add/edit/remove products:
 
-<img src="test.png" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
 
 ## Creation Steps:
 
 ## Step 1: Created initial Login and Registration front end
 
-<img src="initial.png" width="500" height="350" />
+<img src="ReadMeImages/initial.png" width="500" height="350" />
 
 ## Step 2: Password matching animation, user error messages, custom messages and added forgot password functionality
 
-<img src="pmatch.gif" width="150" height="300"/> <img src="userError.gif" width="150" height="300"/> <img src="customError.gif" width="150" height="300"/>
+<img src="ReadMeImages/pmatch.gif" width="150" height="300"/> <img src="ReadMeImages/userError.gif" width="150" height="300"/> <img src="ReadMeImages/customError.gif" width="150" height="300"/>
 
 ## Step 3: Started home table view, and product table view to show categories and products. Updated design.  
 
-<img src="segue.gif" width="150" height="300"/> <img src="udesign.png" width="150" height="300"/>
+<img src="ReadMeImages/segue.gif" width="150" height="300"/> <img src="ReadMeImages/udesign.png" width="150" height="300"/>
 
 ## Step 4: Initiated firestore dummy data, created functionality to parse and display data in tableView (Both for categories and products). Added functions to update tableView on database objects added, removed and edited.
 
 ## Step 5: Started admin application, copied basic storyboard design as images are shared, add category page completed with UIImage picker and tap image picker controller. Uploaded category image from picker to firestore storage, then use url to display in the app. 
 
-<img src="admin.png" width="150" height="300"/> <img src="imagePickers.png" width="150" height="300"/> <img src="imagePicked.png" width="150" height="300"/>
+<img src="ReadMeImages/admin.png" width="150" height="300"/> <img src="ReadMeImages/imagePickers.png" width="150" height="300"/> <img src="ReadMeImages/imagePicked.png" width="150" height="300"/>
 
 ## Step 6: Further additions to admin functionality, added admin products view controller, along with edit/add category and edit/add product view controllers. Added all correspoding UI. Added client images and test products using admin app on phone.
 
-<img src="clientImages.png" width="150" height="300"/> <img src="editProducts.png" width="150" height="300"/>
+<img src="ReadMeImages/clientImages.png" width="150" height="300"/> <img src="ReadMeImages/editProducts.png" width="150" height="300"/>
 
 ## Step 7: Add user favourite (Heart) feature/list functionality, create user service singleton so entire app can access user functionality. Clicking on heart adds to favourite's in database assinged to firebase userID Logout functionality to remove all listeners. 
 
@@ -53,11 +64,11 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 ## Step 9: Started work on shopping cart UI, added products tableView, Payment/Shipping information buttons and price labels to show relevant totals. Add and remove from cart functionality using protocols and delegates. 
 
-<img src="cart.png" width="150" height="300"/>
+<img src="ReadMeImages/cart.png" width="150" height="300"/>
 
 ## Step 10: Use stripe payment method and shipping method UI. In addition Initialized customContext with stripeApi class, sends stripe version and ID via cloud functions via firestore to stripe. Returns an ephemeral key for use with sale, this grabs stripe customer object for user card details and shipping details to be used or saved with stripe.
 
-<img src="card.png" width="150" height="300"/> <img src="shipping.png" width="150" height="300"/>
+<img src="ReadMeImages/card.png" width="150" height="300"/> <img src="ReadMeImages/shipping.png" width="150" height="300"/>
 
 ## Step 11: Client side code for handling stripe payment, didCreatePayment sends data to stripe, stripe response sent back, to finish in didFinishWith to see if payment was successful or not.
 
