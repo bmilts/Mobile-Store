@@ -5,11 +5,15 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # Login and registration:
 
-<img src="test.png" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
 
 # Forgot password:
 
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+
 # View and add product to cart:
+
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/><img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
 
 # Purchase product:
 
