@@ -13,11 +13,7 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # View and add product to cart:
 
-<img src="ReadMeImages/IMG_2563.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
-
-# Add product to cart:
-
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/viewProduct.png" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2563.PNG" width="150" height="300"/> <img src="ReadMeImages/viewProduct.png" width="150" height="300"/>
 
 # Favorite product and see favourites list
 
@@ -25,13 +21,13 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # Purchase product flow, stripe card, address and completed purchase:
 
-<img src="ReadMeImages/IMG_2567.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2566.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2569.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2568.PNG" width="150" height="300"/> 
+<img src="ReadMeImages/IMG_2567.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2566.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2569.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2571.PNG" width="150" height="300"/> 
  
 ## Completed initial admin flow:
 
 # Add/edit/remove products:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/add edit product.PNG" width="150" height="300"/>
 
 ## Creation Steps:
 
