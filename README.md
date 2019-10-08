@@ -5,27 +5,27 @@ Created an E-commerce (and Admin) application for a client to sell his pottery. 
 
 # Login and registration:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2637.PNG" width="150" height="300"/>
 
 # Forgot password:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2562.PNG" width="150" height="300"/>
 
 # View and add product to cart:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2563.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
 
 # Add product to cart:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/viewProduct.png" width="150" height="300"/>
 
 # Favorite product and see favourites list
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/>
+<img src="ReadMeImages/IMG_2564.PNG" width="150" height="300"/> 
 
 # Purchase product flow, stripe card, address and completed purchase:
 
-<img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2561.PNG" width="150" height="300"/> 
+<img src="ReadMeImages/IMG_2567.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2566.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2569.PNG" width="150" height="300"/> <img src="ReadMeImages/IMG_2568.PNG" width="150" height="300"/> 
  
 ## Completed initial admin flow:
 
